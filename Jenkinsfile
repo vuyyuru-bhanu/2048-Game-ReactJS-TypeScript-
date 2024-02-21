@@ -11,7 +11,7 @@ pipeline{
         stage("Sonarqube Analysis "){
             steps{
                 withSonarQubeEnv('sonar-server') {
-                    sh ''' $SCANNER_HOME/bin/sonar-scanner -Dsonar.organization=wm-demo -Dsonar.projectKey=wm-demo_game2048 -Dsonar.sources=. -Dsonar.host.url=https://sonarcloud.io'''
+                    sh ''' $SCANNER_HOME/bin/sonar-scanner -Dsonar.organization=bellcgi -Dsonar.projectKey=bellcgi_cgi -Dsonar.sources=. -Dsonar.host.url=https://sonarcloud.io'''
                 }
             }
         }
